@@ -1,0 +1,193 @@
+/*
+  FormTheme.css - consolidated, valid CSS
+  - Muted/classy theme used across create/update pages
+  - Contains: variables, subtle animations, form-card, form-badge, btn-cta, form-page-background
+*/
+
+:root {
+  --emerald-r: 56;
+  --emerald-g: 142;
+  --emerald-b: 110;
+  --emerald-hex: #388e6e;
+  --muted-ink: #243033;
+  --card-bg: #ffffff;
+  --soft-shadow: 0 8px 26px rgba(16, 24, 40, 0.06);
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeUp 420ms cubic-bezier(0.2, 0.9, 0.2, 1) both;
+}
+
+/* Card */
+.form-card {
+  background: linear-gradient(
+    180deg,
+    rgba(56, 142, 110, 0.02),
+    rgba(255, 255, 255, 0.95)
+  );
+  border: 1px solid rgba(16, 24, 40, 0.04);
+  box-shadow: 0 18px 48px rgba(16, 24, 40, 0.09);
+  border-radius: 14px;
+  padding: 1.6rem;
+  backdrop-filter: saturate(0.98) blur(2px);
+  position: relative;
+}
+
+.form-card::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -18px;
+  width: calc(100% + 40px);
+  height: 28px;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(16, 24, 40, 0.12),
+    rgba(16, 24, 40, 0.02)
+  );
+  filter: blur(14px);
+  opacity: 0.5;
+  z-index: -1;
+}
+
+/* Badge / headings */
+.form-badge {
+  background: linear-gradient(
+    90deg,
+    rgba(56, 142, 110, 0.1),
+    rgba(16, 24, 40, 0.02)
+  );
+  color: rgba(36, 48, 51, 0.95);
+  font-weight: 700;
+  padding: 0.55rem 1rem;
+  border-radius: 999px;
+  box-shadow: 0 2px 8px rgba(16, 24, 40, 0.035) inset;
+}
+
+/* Inputs */
+.custom-input,
+.form-control {
+  transition:
+    box-shadow 220ms ease,
+    transform 120ms ease;
+  border-radius: 8px;
+}
+.custom-input:focus,
+.form-control:focus {
+  outline: none;
+  box-shadow: 0 6px 20px rgba(56, 142, 110, 0.085);
+  transform: translateY(-1px);
+}
+
+/* Primary CTA */
+.btn-cta {
+  background: linear-gradient(
+    90deg,
+    rgba(56, 142, 110, 0.95),
+    rgba(14, 165, 164, 0.9)
+  );
+  color: #fff;
+  border: none;
+  box-shadow: 0 8px 26px rgba(16, 24, 40, 0.08);
+  transition:
+    transform 200ms cubic-bezier(0.2, 0.9, 0.2, 1),
+    box-shadow 200ms ease;
+  border-radius: 10px;
+  padding: 0.5rem 1.1rem;
+}
+.btn-cta:hover:not(:disabled) {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(16, 24, 40, 0.12);
+}
+
+/* Section card and utilities */
+.section-card {
+  background: linear-gradient(
+    180deg,
+    rgba(250, 250, 250, 0.6),
+    rgba(255, 255, 255, 0.9)
+  );
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 4px 12px rgba(2, 6, 23, 0.03);
+}
+.slot-row,
+.item-row {
+  transition:
+    transform 220ms ease,
+    opacity 220ms ease;
+}
+.slot-row.enter,
+.item-row.enter {
+  animation: fadeUp 300ms ease both;
+}
+.muted-hint {
+  color: #6b7280;
+}
+.card-compact {
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+/* Page background: subtle, classy, non-vibrant */
+.form-page-background {
+  background-image:
+    radial-gradient(
+      circle at 12% 22%,
+      rgba(16, 24, 40, 0.02) 0%,
+      rgba(16, 24, 40, 0) 28%
+    ),
+    radial-gradient(
+      circle at 88% 78%,
+      rgba(56, 142, 110, 0.018) 0%,
+      rgba(255, 255, 255, 0) 34%
+    ),
+    linear-gradient(
+      135deg,
+      rgba(250, 252, 251, 1) 0%,
+      rgba(253, 255, 254, 1) 100%
+    );
+  background-color: #fcfefc;
+  background-size: cover;
+  padding: 3rem 0;
+  position: relative;
+}
+.form-page-background::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(16, 24, 40, 0.02) 0%,
+    rgba(16, 24, 40, 0.045) 55%,
+    rgba(16, 24, 40, 0.09) 100%
+  );
+  mix-blend-mode: multiply;
+  opacity: 0.12;
+}
+
+/* Small responsive helpers */
+@media (max-width: 768px) {
+  .form-card {
+    padding: 1rem;
+    border-radius: 12px;
+  }
+  .form-page-background {
+    padding: 2rem 0;
+  }
+}
+
+/* end of FormTheme.css */

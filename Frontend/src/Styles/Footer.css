@@ -1,0 +1,49 @@
+.footer {
+  background-color: #111;  
+  color: #f1f1f1;  
+  padding: 30px 0;
+  font-family: Arial, sans-serif;
+}
+
+.footer-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #f1f1f1;  
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 30px;  
+  margin-bottom: 15px;
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s;
+}
+
+.icon-github{
+  filter: brightness(0) invert(1); 
+
+}
+
+.footer-copy {
+  font-size: 14px;
+  margin-top: 15px;
+  color: #f1f1f1;  
+}
+
+@media (max-width: 768px) {
+  .social-icons {
+    flex-direction: row;  
+    gap: 20px; 
+  }
+
+  .icon {
+    width: 35px;
+    height: 35px; 
+  }
+}

@@ -1,0 +1,73 @@
+.navbar-brand span {
+  letter-spacing: 0.5px;
+}
+
+.symbol img {
+  border-radius: 50%;
+}
+
+ .offcanvas {
+  width: 280px;
+}
+
+ @media (max-width: 576px) {
+  .symbol-name {
+    font-size: 15px;
+  }
+}
+
+ .user-responsive-btn {
+  display: flex;
+  align-items: center;
+   border: none;
+  background: transparent;
+  padding: 4px 8px;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+.user-responsive-btn:hover {
+  transform: translateY(-2px);
+}
+
+ .user-avatar-circle {
+   background: linear-gradient(135deg, #0dcaf0, #0a58ca);
+  color: white;
+  font-weight: bold;
+  border-radius: 50%;
+  display: flex;
+     padding: 2px 7px;
+
+ }
+
+ .user-name {
+  font-size: 14px;
+}
+
+ .connect-responsive-btn {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid #0dcaf0;
+  color: #0dcaf0;
+  padding: 6px 14px;
+  border-radius: 25px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+ .projects-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 1px;
+  padding: 2px 7px;
+  border-radius: 25px;
+  font-weight: 500;
+  text-decoration: none;
+  color: #ffffff;
+  background: linear-gradient(135deg, #0dcaf0, #0a58ca);
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+ 

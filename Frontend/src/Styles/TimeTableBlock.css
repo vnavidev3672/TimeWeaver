@@ -1,0 +1,25 @@
+.terminal-card {
+    background-color: #0d1117 !important;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    min-height: 320px;
+}
+
+.terminal-body {
+    overflow-x: auto;  
+}
+
+ .terminal-body::-webkit-scrollbar {
+    display: none;
+}
+
+.text-emerald {
+    color: #10b981 !important;
+    text-shadow: 0 0 5px rgba(16, 185, 129, 0.3);
+}
+
+@media (max-width: 768px) {
+    .terminal-body {
+        min-height: 280px;
+        padding: 10px !important;
+    }
+}

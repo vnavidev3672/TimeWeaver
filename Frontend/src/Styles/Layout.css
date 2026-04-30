@@ -1,0 +1,11 @@
+.main-content {
+  flex-grow: 1;
+  min-height: calc(100vh - 7vh);
+  margin-top: 7.5vh;
+
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
